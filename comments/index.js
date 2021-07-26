@@ -28,7 +28,7 @@ app.post("/posts/:id/comments", async (req, res) => {
   res.status(201).send(comments);
 });
 
-app.post("/events", async (req, res) => {});
+app.post("/events", (req, res) => {});
 
 app.listen(5000, () => {
   console.log("port started");
