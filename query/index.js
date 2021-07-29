@@ -21,11 +21,12 @@ const handleEvents  = (type, data) => {
  }
 
  if (type == "CommentUpdated") {
-   const { id, content, postId, status } = data;
+   const { id, status, postId, content } = data;
    const post = posts[postId];
    const comment = post.comments.find((comment) => {
      return (comment.id = id);
    });
+   console.log("hey",comment);
    comment.status = status;
    comment.content = content;
  }
@@ -42,8 +43,8 @@ app.post("/events", (req, res) => {
  
 });
 
-app.listen(4002, () => {
-  console.log("port started");
+app.listen(4002, async() => {
+  console.log("port started query on 4002");
 
   const res = await axios.get("http://localhost:4005/events");
 

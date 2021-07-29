@@ -33,4 +33,4 @@ app.post("/events", (req, res) => {
     
 })
 
-app.listen(4000, ()=>{console.log("port started");})
+app.listen(4000, ()=>{console.log("port started posts on 4000");})

@@ -24,5 +24,5 @@ app.post("/events", async (req, res) => {
 });
 
 app.listen(4003, () => {
-  console.log("port started");
+  console.log("port started moderation on 4003");
 });
